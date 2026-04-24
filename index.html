@@ -1,0 +1,195 @@
+﻿<!doctype html>
+<html lang="ar" dir="rtl" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Najeeb Al-Kholani | Graphic Designer</title>
+    <meta name="description" content="Premium graphic design portfolio by Najeeb Al-Kholani." />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Inter", "sans-serif"],
+              arabic: ["Noto Kufi Arabic", "sans-serif"]
+            },
+            colors: {
+              gold: "#d4af37"
+            }
+          }
+        }
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body class="bg-[#0f1117] text-slate-100 font-body transition-colors duration-300">
+    <header id="top-nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <button data-scroll="#home" class="text-xl font-display tracking-widest text-gradient-gold">NAJEEB</button>
+
+        <div class="hidden md:flex items-center gap-8 text-sm uppercase tracking-[0.2em]">
+          <button data-scroll="#home" data-i18n="navHome">الرئيسية</button>
+          <button data-scroll="#about" data-i18n="navAbout">عني</button>
+          <button data-scroll="#portfolio" data-i18n="navPortfolio">أعمالي</button>
+          <button data-scroll="#contact" data-i18n="navContact">تواصل</button>
+        </div>
+
+        <div class="hidden md:flex items-center gap-3">
+          <button id="themeToggle" class="pill-btn" aria-label="toggle theme">🌙</button>
+          <button id="langToggle" class="pill-btn text-xs">EN</button>
+        </div>
+
+        <div class="md:hidden flex items-center gap-2">
+          <button id="themeToggleMobile" class="pill-btn" aria-label="toggle theme">🌙</button>
+          <button id="langToggleMobile" class="pill-btn text-xs">EN</button>
+          <button id="mobileMenuBtn" class="pill-btn" aria-label="open menu">☰</button>
+        </div>
+      </nav>
+
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/50 backdrop-blur-xl">
+        <div class="px-6 py-4 flex flex-col gap-4 text-sm uppercase tracking-[0.2em]">
+          <button data-scroll="#home" data-i18n="navHome">الرئيسية</button>
+          <button data-scroll="#about" data-i18n="navAbout">عني</button>
+          <button data-scroll="#portfolio" data-i18n="navPortfolio">أعمالي</button>
+          <button data-scroll="#contact" data-i18n="navContact">تواصل</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="relative min-h-screen flex items-end overflow-hidden">
+        <img src="./src/assets/hero-bg.jpg" alt="Hero background" class="absolute inset-0 w-full h-full object-cover scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-black/80"></div>
+
+        <div class="relative z-10 mx-auto max-w-7xl w-full px-6 md:px-12 pb-20 md:pb-28 text-right">
+          <div class="fade-up">
+            <div class="inline-flex items-center mb-5 px-5 py-2 rounded-full border border-gold/30 bg-black/30 backdrop-blur-md">
+              <span id="typingText" class="min-w-[220px] text-sm md:text-base"></span>
+              <span id="typingCursor" class="ms-1 text-gold">|</span>
+            </div>
+
+            <h1 class="font-display text-5xl sm:text-6xl md:text-8xl leading-[0.9] mb-6">
+              <span data-i18n="firstName" class="text-gradient-gold">نجيب</span><br />
+              <span data-i18n="lastName">الخولاني</span>
+            </h1>
+
+            <p data-i18n="heroTagline" class="max-w-2xl ms-auto text-lg md:text-2xl text-slate-200/90 leading-relaxed mb-8">
+              أصنع قصصًا بصرية تأسر الأنظار وتُلهم وترتقي بالعلامات التجارية
+            </p>
+
+            <div class="flex flex-wrap items-center justify-end gap-4">
+              <button data-scroll="#portfolio" data-i18n="exploreWork" class="gold-btn">استعرض الأعمال</button>
+              <button data-scroll="#portfolio" data-i18n="scrollLabel" class="text-slate-200/80 text-sm tracking-[0.15em] uppercase">انزل</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-24 md:py-32">
+        <div class="mx-auto max-w-7xl px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+          <div class="fade-up">
+            <p data-i18n="aboutTitleSmall" class="text-gold tracking-[0.35em] text-xs uppercase mb-4">عني</p>
+            <h2 class="font-display text-4xl md:text-5xl mb-6">
+              <span data-i18n="aboutHeadingStart">التصميم هو </span>
+              <span data-i18n="aboutHeadingAccent" class="text-gradient-gold italic">تفكير</span>
+              <span data-i18n="aboutHeadingEnd"> بصري</span>
+            </h2>
+            <p data-i18n="aboutParagraph1" class="text-slate-300 leading-relaxed mb-5"></p>
+            <p data-i18n="aboutParagraph2" class="text-slate-300 leading-relaxed mb-10"></p>
+
+            <div class="grid grid-cols-3 gap-4">
+              <div>
+                <p class="font-display text-3xl text-gradient-gold">150+</p>
+                <p data-i18n="statProjects" class="text-xs text-slate-400 mt-1"></p>
+              </div>
+              <div>
+                <p class="font-display text-3xl text-gradient-gold">50+</p>
+                <p data-i18n="statClients" class="text-xs text-slate-400 mt-1"></p>
+              </div>
+              <div>
+                <p class="font-display text-3xl text-gradient-gold">8+</p>
+                <p data-i18n="statYears" class="text-xs text-slate-400 mt-1"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <article class="glass-card fade-up p-6 rounded-xl">
+              <h3 data-i18n="service1Title" class="font-display text-xl mb-2"></h3>
+              <p data-i18n="service1Desc" class="text-slate-300 text-sm"></p>
+            </article>
+            <article class="glass-card fade-up p-6 rounded-xl">
+              <h3 data-i18n="service2Title" class="font-display text-xl mb-2"></h3>
+              <p data-i18n="service2Desc" class="text-slate-300 text-sm"></p>
+            </article>
+            <article class="glass-card fade-up p-6 rounded-xl">
+              <h3 data-i18n="service3Title" class="font-display text-xl mb-2"></h3>
+              <p data-i18n="service3Desc" class="text-slate-300 text-sm"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="py-24 md:py-32 bg-black/20">
+        <div class="mx-auto max-w-7xl px-6 md:px-12">
+          <div class="text-center mb-14 fade-up">
+            <p data-i18n="portfolioSmall" class="text-gold tracking-[0.35em] text-xs uppercase mb-3">معرض الأعمال</p>
+            <h2 class="font-display text-4xl md:text-5xl">
+              <span data-i18n="portfolioHeadingStart">أعمال </span>
+              <span data-i18n="portfolioHeadingAccent" class="text-gradient-gold italic">مختارة</span>
+            </h2>
+          </div>
+
+          <div id="portfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-24 md:py-32">
+        <div class="mx-auto max-w-5xl px-6 md:px-12 text-center">
+          <p data-i18n="contactSmall" class="text-gold tracking-[0.35em] text-xs uppercase mb-3">تواصل معي</p>
+          <h2 class="font-display text-4xl md:text-5xl mb-6">
+            <span data-i18n="contactHeadingStart">لنصنع </span>
+            <span data-i18n="contactHeadingAccent" class="text-gradient-gold italic">إبداعًا</span>
+            <span data-i18n="contactHeadingEnd"> معًا</span>
+          </h2>
+          <p data-i18n="contactText" class="text-slate-300 max-w-2xl mx-auto mb-12"></p>
+
+          <div class="grid sm:grid-cols-3 gap-4 mb-10">
+            <a class="glass-card rounded-xl p-6 fade-up" href="https://wa.me/96777060883" target="_blank" rel="noopener noreferrer">
+              <p data-i18n="contactWhatsapp" class="text-xs text-slate-400 mb-1"></p>
+              <p data-i18n="contactWhatsappValue" class="text-sm"></p>
+            </a>
+            <a class="glass-card rounded-xl p-6 fade-up" href="mailto:abdaa.adv@gmail.com">
+              <p data-i18n="contactEmail" class="text-xs text-slate-400 mb-1"></p>
+              <p class="text-sm">abdaa.adv@gmail.com</p>
+            </a>
+            <div class="glass-card rounded-xl p-6 fade-up">
+              <p data-i18n="contactLocation" class="text-xs text-slate-400 mb-1"></p>
+              <p data-i18n="contactLocationValue" class="text-sm"></p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/96777060883" target="_blank" rel="noopener noreferrer" class="gold-btn inline-flex">WhatsApp</a>
+        </div>
+
+        <footer class="mt-20 border-t border-white/10">
+          <div class="mx-auto max-w-7xl px-6 md:px-12 py-6 flex flex-col sm:flex-row gap-3 items-center justify-between text-xs text-slate-400">
+            <p data-i18n="footerText"></p>
+            <p class="font-display text-gradient-gold tracking-widest">NAJEEB</p>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
